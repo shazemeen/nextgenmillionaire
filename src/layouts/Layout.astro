@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Next Gen Millionaire | Full-Time Financial Planning Career in Malaysia — AIA Elite Academy",
+  description = "AIA Malaysia's Next Gen Millionaire (NGM) programme. Earn monthly bonuses up to RM16,000 from Month 1, on top of commission. Full-time financial planning career with structured 24-month support.",
+  ogImage = "https://nextgenmillionaire.notbadlah.com/og-image.jpg"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-MY">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="AIA full-time career Malaysia, financial planner career Malaysia, AIA Elite Academy NGM, next gen millionaire AIA, full-time insurance agent Malaysia, financial planning job Malaysia, AIA life planner salary, income replacement financial planning Malaysia" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nextgenmillionaire.notbadlah.com" />
+    <meta name="author" content="Charles Shazemeen" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextgenmillionaire.notbadlah.com" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_MY" />
+    <meta property="og:site_name" content="Next Gen Millionaire" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Next Gen Millionaire — AIA Malaysia Full-Time Career Programme",
+      "description": "Structured 24-month full-time financial planning career with AIA Malaysia. Monthly bonuses up to RM16,000 from Month 1.",
+      "url": "https://nextgenmillionaire.notbadlah.com",
+      "publisher": {
+        "@type": "Person",
+        "name": "Charles Shazemeen",
+        "url": "https://shazemeen.com",
+        "jobTitle": "Unit Manager, AIA Malaysia"
+      },
+      "mainEntity": {
+        "@type": "JobPosting",
+        "title": "Full-Time Financial Planner — AIA Elite Academy NGM",
+        "description": "Join AIA Malaysia's Next Gen Millionaire programme as a full-time Life Planner. Earn monthly bonuses from RM4,500 to RM16,000/month on top of commission, with structured training and 24 months of support.",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "AIA Malaysia"
+        },
+        "employmentType": "FULL_TIME",
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MY"
+          }
+        },
+        "baseSalary": {
+          "@type": "MonetaryAmount",
+          "currency": "MYR",
+          "value": {
+            "@type": "QuantitativeValue",
+            "minValue": 4500,
+            "maxValue": 16000,
+            "unitText": "MONTH"
+          }
+        }
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

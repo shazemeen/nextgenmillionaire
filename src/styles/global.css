@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fafafa;
+    color: #111111;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #D4AF37;
+    color: #0C1B33;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #111111;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 2px; }
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.12);
+}
+
+/* Fade animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+/* Tabular numbers */
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Bonus table highlight */
+.tier-top {
+  background: #0C1B33;
+  color: #D4AF37;
+}
+.tier-top td { color: #D4AF37; }
